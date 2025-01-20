@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { delay, Observable } from 'rxjs';
 import { IInstalacionMuseistica } from '../interfaces/iinstalacion-museistica';
 
+
 @Injectable({
   providedIn: 'root'
 })

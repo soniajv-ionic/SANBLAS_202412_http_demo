@@ -1,3 +1,9 @@
+<!-- Campo de búsqueda por provincia -->
+<div>
+    <label for="provincia">Buscar por provincia:</label>
+    <input type="text" id="provincia" [(ngModel)]="provinciaBuscada" placeholder="Escribe el nombre de la provincia" />
+</div>
+
 <!-- Botón para cargar los datos de los museos -->
 <button (click)="cargarDatos()" [disabled]="cargando">Cargar museos</button>
 
@@ -7,7 +13,7 @@
 </div>
 
 <!-- Lista de museos -->
-<div *ngFor="let museo of museos">
+<div *ngFor="let museo of museosFiltrados">
     <div class="museo-card">
         <h4>{{ museo.name }}</h4>
         
@@ -26,6 +32,5 @@
         <!-- Enlace a la web del museo -->
         <a [href]="museo.web" target="_blank">Visitar web</a>
     </div>
-
+    <hr> <!-- Separador entre museos -->
 </div>
-
