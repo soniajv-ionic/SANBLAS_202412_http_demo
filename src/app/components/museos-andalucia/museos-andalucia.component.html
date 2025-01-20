@@ -1,0 +1,8 @@
+<button (click)="cargarDatos()" [disabled]="cargando">Cargar museos</button>
+<div>
+    <img *ngIf="cargando" width="100px" src="https://cssbud.com/wp-content/uploads/2022/05/pendulum.gif">
+</div>
+<div *ngFor="let museo of museos">
+    <h4>{{museo.name}}</h4>
+    <a [href]="museo.web" target="_blank">web</a>
+</div>
