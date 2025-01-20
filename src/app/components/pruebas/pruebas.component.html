@@ -1,0 +1,5 @@
+<div *ngFor="let cancion of canciones">
+    <h5>{{cancion.title}}</h5>
+    <img [src]="cancion.artwork" width="100px">
+    <audio [src]="cancion.url" controls></audio>
+</div>
