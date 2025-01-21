@@ -1,11 +1,12 @@
 <!-- Campo de búsqueda por provincia -->
 <div>
     <label for="provincia">Buscar por provincia:</label>
-    <input type="text" id="provincia" [(ngModel)]="provinciaBuscada" placeholder="Escribe el nombre de la provincia" />
+    <input type="text" id="provincia" [(ngModel)]="provinciaBuscada" placeholder="Escribe el nombre de la provincia" (input)="cargarDatos()"/>
 </div>
 
 <!-- Botón para cargar los datos de los museos -->
-<button (click)="cargarDatos()" [disabled]="cargando">Cargar museos</button>
+
+<!-- <button (click)="cargarDatos()" [disabled]="cargando">Buscar museos</button> -->
 
 <!-- Spinner que indica que los datos se están cargando -->
 <div *ngIf="cargando">
